@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MyFirstAppTest</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">send</string>
+    <string name="paragraph">dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint
+        suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi
+        dolor voluptatum modi aut vitae dignissimos aperiam dolorem qui eum
+        \nfacilis quibusdam animi sint suscipit qui sint possimus cum\nq
+        uaerat magni maiores excepturi\nipsam ut commodi dolor volupta
+        \nfacilis quibusdam animi sint suscipit qui sint possimus cum\nq
+        uaerat magni maiores excepturi\nipsam ut commodi dolor volupta
+        \nfacilis quibusdam animi sint suscipit qui sint possimus cum\nq
+        uaerat magni maiores excepturi\nipsam ut commodi dolor volupta
+        \nfacilis quibusdam animi sint suscipit qui sint possimus cum\nq
+        uaerat magni maiores excepturi\nipsam ut commodi dolor volupta
+        \nfacilis quibusdam animi sint suscipit qui sint possimus cum\nq
+        uaerat magni maiores excepturi\nipsam ut commodi dolor volupta
+        tum modi aut vitae</string>
+    <string name="title_activity_meme">MemeActivity</string>
+</resources>
