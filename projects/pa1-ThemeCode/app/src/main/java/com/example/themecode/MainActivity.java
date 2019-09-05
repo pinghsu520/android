@@ -19,10 +19,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -46,13 +50,25 @@ public class MainActivity extends AppCompatActivity {
 
 
         TextView textView = new TextView(context);
-        textView.setText("This TextView is dynamically created\n" +
-                "This TextView is dynamically created\n" +
-                "This TextView is dynamically created\n" +
-                "This TextView is dynamically created\n" +
-                "This TextView is dynamically created\n" +
-                "This TextView is dynamically created\n");
+        LinearLayout.LayoutParams textView_LayoutParams = new
+                LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+//        textView_LayoutParams.gravity = Gravity.CENTER;
+        textView.setGravity(Gravity.CENTER);
+        textView.setText("The Golden State Warriors are an American professional basketball team\n" +
+                "        based in San Francisco. The Warriors compete in the National Basketball Association (NBA),\n" +
+                "        as a member of the Western Conference Pacific Division. Founded in 1946 in\n" +
+                "        Philadelphia, the Warriors relocated to the San Francisco Bay Area in 1962 and took the\n" +
+                "        name of the city.");
         textView.setTextColor(Color.parseColor("#0E0E75"));
+        final float scale = context.getResources().getDisplayMetrics().density;
+        textView.setTextSize(25);
+
+//
+//        textView_LayoutParams.setMargins((int) (50 * scale + 0.5f), (int) (50 * scale + 0.5f),
+//                (int) (50 * scale + 0.5f), (int) (50 * scale + 0.5f));
+        textView.setLayoutParams(textView_LayoutParams);
 
 
 
@@ -60,12 +76,21 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout linearLayout = new LinearLayout(context);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         linearLayout.setGravity(Gravity.RIGHT);
-
+        linearLayout.setBackgroundColor(Color.parseColor("#39ff14"));
 //        linearLayout.setBackgroundColor(Color.parseColor("0E0E75"));
 
 
 
 
+        ImageView gsw_logo = new ImageView(this);
+        ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(400, 400);
+
+        gsw_logo.setLayoutParams(lp);
+        gsw_logo.setImageResource(R.drawable.gsw1);
+
+
+        linearLayout.addView(gsw_logo);
+        linearLayout.addView(title);
 
         linearLayout.addView(textView);
         scrollView.addView(linearLayout);
