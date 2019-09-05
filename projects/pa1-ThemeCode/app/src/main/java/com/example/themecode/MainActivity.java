@@ -1,8 +1,11 @@
 package com.example.themecode;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
+
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.ViewGroup;
@@ -27,26 +30,51 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
+        Context context=getApplicationContext();
+        ScrollView scrollView = new ScrollView(context);
+        scrollView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
 
-        ScrollView scrollView = new ScrollView(getApplicationContext());
-        scrollView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.MATCH_PARENT));
 
-        TextView textView = new TextView(getApplicationContext());
-        textView.setText("the boy");
-
-
-        Button button = new Button(getApplicationContext());
-        button.setText("This Button is dynamically created");
+        // Title: GSW
+        TextView title = new TextView(context);
+        title.setText("Golden State Warriors");
+        title.setTextColor(Color.parseColor("#000000"));
+        title.setTextSize(35);
 
 
-        LinearLayout linearLayout = new LinearLayout(getApplicationContext());
+
+
+        TextView textView = new TextView(context);
+        textView.setText("This TextView is dynamically created\n" +
+                "This TextView is dynamically created\n" +
+                "This TextView is dynamically created\n" +
+                "This TextView is dynamically created\n" +
+                "This TextView is dynamically created\n" +
+                "This TextView is dynamically created\n");
+        textView.setTextColor(Color.parseColor("#0E0E75"));
+
+
+
+
+        LinearLayout linearLayout = new LinearLayout(context);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
+        linearLayout.setGravity(Gravity.RIGHT);
+
+//        linearLayout.setBackgroundColor(Color.parseColor("0E0E75"));
+
+
+
+
+
         linearLayout.addView(textView);
-        linearLayout.addView(button);
         scrollView.addView(linearLayout);
 
+
+
+        ImageView imageView1 = new ImageView(this);
+
+        setContentView(scrollView);
 
 //second way
 
