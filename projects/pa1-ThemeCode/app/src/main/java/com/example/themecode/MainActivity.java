@@ -40,10 +40,19 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        TextView space = new TextView(context);
+        space.setText("\n");
+        space.setGravity(Gravity.CENTER);
+        space.setTextSize(25);
+
+
+
         // Title: GSW
         TextView title = new TextView(context);
+        title.setTypeface(null,Typeface.BOLD_ITALIC);
         title.setText("Golden State Warriors");
         title.setTextColor(Color.parseColor("#000000"));
+        title.setGravity(Gravity.CENTER);
         title.setTextSize(35);
 
 
@@ -66,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
         textView.setTextSize(25);
 
 //
-//        textView_LayoutParams.setMargins((int) (50 * scale + 0.5f), (int) (50 * scale + 0.5f),
-//                (int) (50 * scale + 0.5f), (int) (50 * scale + 0.5f));
+        textView_LayoutParams.setMargins((int) (50 * scale + 0.5f), (int) (50 * scale + 0.5f),
+                (int) (50 * scale + 0.5f), (int) (50 * scale + 0.5f));
         textView.setLayoutParams(textView_LayoutParams);
 
 
@@ -75,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayout linearLayout = new LinearLayout(context);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
-        linearLayout.setGravity(Gravity.RIGHT);
+        linearLayout.setGravity(Gravity.CENTER);
         linearLayout.setBackgroundColor(Color.parseColor("#39ff14"));
 //        linearLayout.setBackgroundColor(Color.parseColor("0E0E75"));
 
@@ -83,21 +92,94 @@ public class MainActivity extends AppCompatActivity {
 
 
         ImageView gsw_logo = new ImageView(this);
+        gsw_logo.setLayoutParams(textView_LayoutParams);
         ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(400, 400);
-
         gsw_logo.setLayoutParams(lp);
-        gsw_logo.setImageResource(R.drawable.gsw1);
+        gsw_logo.setImageResource(R.drawable.gswlogo);
 
 
+        ImageView gsw_champs = new ImageView(this);
+        gsw_champs.setLayoutParams(textView_LayoutParams);
+
+        ViewGroup.LayoutParams lp1 = new ViewGroup.LayoutParams(1000, 1500);
+        gsw_champs.setLayoutParams(lp1);
+        gsw_champs.setImageResource(R.drawable.gswchamps);
+
+
+
+        TextView textView1 = new TextView(context);
+        LinearLayout.LayoutParams textView_LayoutParams1 = new
+                LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+//        textView_LayoutParams1.gravity = Gravity.CENTER;
+        textView1.setGravity(Gravity.CENTER);
+        textView1.setText("The 2018 Finals pitted the Warriors against the Cavaliers for the fourth consecutive season;\n" +
+                "    this marked the first time in NBA history that the same two teams had met in the Finals for\n" +
+                "    four consecutive years. The Warriors swept the Cavaliers to win their second straight NBA\n" +
+                "    championship; previously, there had not been an NBA Finals sweep since 2007.\n" +
+                "    Following the 2018 NBA Finals, writers for Sports Illustrated,\n" +
+                "    USA Today described the Warriors as a dynasty.");
+        textView1.setTextColor(Color.parseColor("#ff0000"));
+        final float scale1 = context.getResources().getDisplayMetrics().density;
+        textView1.setTextSize(25);
+        textView_LayoutParams1.setMargins((int) (50 * scale1 + 0.5f), (int) (50 * scale1 + 0.5f),
+                (int) (50 * scale1 + 0.5f), (int) (50 * scale1 + 0.5f));
+        textView1.setLayoutParams(textView_LayoutParams1);
+
+
+
+
+
+
+        ImageView steph = new ImageView(this);
+        steph.setLayoutParams(textView_LayoutParams);
+
+        ViewGroup.LayoutParams lp2 = new ViewGroup.LayoutParams(1000, 1500);
+        steph.setLayoutParams(lp2);
+        steph.setImageResource(R.drawable.steph1);
+
+
+
+
+        TextView textView2 = new TextView(context);
+        LinearLayout.LayoutParams textView_LayoutParams2 = new
+                LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+//        textView_LayoutParams2.gravity = Gravity.CENTER;
+        textView2.setGravity(Gravity.CENTER);
+        textView2.setText("The leader of the GSW, Wardell Stephen \"Steph\" Curry II (born March 14, 1988) is an American\n" +
+                "    professional basketball player for the Golden State Warriors of the National Basketball\n" +
+                "    Association (NBA). A six-time NBA All-Star, he has been named the NBA Most Valuable Player\n" +
+                "    (MVP) twice and won three NBA championships with the Warriors. Many players and analysts\n" +
+                "    have called him the greatest shooter in NBA history.");
+        textView2.setTextColor(Color.parseColor("#000000"));
+        final float scale2 = context.getResources().getDisplayMetrics().density;
+        textView2.setTextSize(25);
+        textView_LayoutParams2.setMargins((int) (50 * scale2 + 0.5f), (int) (50 * scale2 + 0.5f),
+                (int) (50 * scale2 + 0.5f), (int) (50 * scale2 + 0.5f));
+        textView2.setLayoutParams(textView_LayoutParams2);
+
+
+
+        linearLayout.addView(space);
         linearLayout.addView(gsw_logo);
         linearLayout.addView(title);
 
+
+
         linearLayout.addView(textView);
+        linearLayout.addView(gsw_champs);
+        linearLayout.addView(textView1);
+        linearLayout.addView(steph);
+        linearLayout.addView(textView2);
+
         scrollView.addView(linearLayout);
 
 
 
-        ImageView imageView1 = new ImageView(this);
+
 
         setContentView(scrollView);
 
