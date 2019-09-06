@@ -27,18 +27,27 @@ import android.widget.TextView;
 
 import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
 
+/**
+ * The purpose of this program is to show a theme and have pictures and texts that introduce your
+ * interests in the app. *
+ *
+ * I used many features such as ScrollView and Linear Layout along with a multitude of features
+ * following the spec such as color, formatting, textsize, etc. *
+ */
+
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        // sets up the context for the program
 
         Context context=getApplicationContext();
         ScrollView scrollView = new ScrollView(context);
         scrollView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
 
-
+        // extraneous spaces
 
         TextView space = new TextView(context);
         space.setText("\n");
@@ -56,14 +65,13 @@ public class MainActivity extends AppCompatActivity {
         title.setTextSize(35);
 
 
-
+        // intro
 
         TextView textView = new TextView(context);
         LinearLayout.LayoutParams textView_LayoutParams = new
                 LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
-//        textView_LayoutParams.gravity = Gravity.CENTER;
         textView.setGravity(Gravity.CENTER);
         textView.setText("The Golden State Warriors are an American professional basketball team\n" +
                 "        based in San Francisco. The Warriors compete in the National Basketball Association (NBA),\n" +
@@ -74,22 +82,20 @@ public class MainActivity extends AppCompatActivity {
         final float scale = context.getResources().getDisplayMetrics().density;
         textView.setTextSize(25);
 
-//
+
         textView_LayoutParams.setMargins((int) (50 * scale + 0.5f), (int) (50 * scale + 0.5f),
                 (int) (50 * scale + 0.5f), (int) (50 * scale + 0.5f));
         textView.setLayoutParams(textView_LayoutParams);
 
 
-
+        // stars the LinearLayout so everything is centered/vetical
 
         LinearLayout linearLayout = new LinearLayout(context);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         linearLayout.setGravity(Gravity.CENTER);
         linearLayout.setBackgroundColor(Color.parseColor("#39ff14"));
-//        linearLayout.setBackgroundColor(Color.parseColor("0E0E75"));
 
-
-
+        // GSW logo
 
         ImageView gsw_logo = new ImageView(this);
         gsw_logo.setLayoutParams(textView_LayoutParams);
@@ -97,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         gsw_logo.setLayoutParams(lp);
         gsw_logo.setImageResource(R.drawable.gswlogo);
 
+        // GSW champ pic
 
         ImageView gsw_champs = new ImageView(this);
         gsw_champs.setLayoutParams(textView_LayoutParams);
@@ -106,13 +113,13 @@ public class MainActivity extends AppCompatActivity {
         gsw_champs.setImageResource(R.drawable.gswchamps);
 
 
+        // Information on champ
 
         TextView textView1 = new TextView(context);
         LinearLayout.LayoutParams textView_LayoutParams1 = new
                 LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
-//        textView_LayoutParams1.gravity = Gravity.CENTER;
         textView1.setGravity(Gravity.CENTER);
         textView1.setText("The 2018 Finals pitted the Warriors against the Cavaliers for the fourth consecutive season;\n" +
                 "    this marked the first time in NBA history that the same two teams had met in the Finals for\n" +
@@ -130,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        // Stephen Curry introduction
 
         ImageView steph = new ImageView(this);
         steph.setLayoutParams(textView_LayoutParams);
@@ -162,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
         textView2.setLayoutParams(textView_LayoutParams2);
 
 
+        // Linear Layout adds all information
 
         linearLayout.addView(space);
         linearLayout.addView(gsw_logo);
@@ -179,127 +187,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
         setContentView(scrollView);
-
-//second way
-
-
-
-//
-//
-////        ScrollView scrollView = new ScrollView(this);
-////        scrollView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-////                ViewGroup.LayoutParams.MATCH_PARENT));
-////
-//
-//        TextView textView = new TextView(this);
-//        textView.setTextColor(Color.parseColor("#0000ff"));
-//        textView.setText("This TextView is dynamically created\n" +
-//                "This TextView is dynamically created\n" +
-//                "This TextView is dynamically created\n" +
-//                "This TextView is dynamically created\n" +
-//                "This TextView is dynamically created\n" +
-//                "This TextView is dynamically created\n");
-//
-//
-////        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-//        LinearLayout linearLayout = new LinearLayout(this);
-//        linearLayout.setOrientation(LinearLayout.VERTICAL);
-//
-//
-//        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ActionBar.LayoutParams.FILL_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
-//        this.addContentView(linearLayout, layoutParams);
-//        linearLayout.addView(textView);
-//
-//
-//
-//        ImageView imageView1 = new ImageView(this);
-//            LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//            params1.setMargins(0, 100, 0, 30);
-//            params1.gravity = Gravity.CENTER;
-//            imageView1.setLayoutParams(params1);
-//            imageView1.setImageResource(R.drawable.gsw1);
-//            linearLayout.addView(imageView1);
-//
-//            ImageView imageView2 = new ImageView(this);
-//            LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//            params1.setMargins(20, 10, 20, 10);
-//            params1.gravity = Gravity.CENTER;
-//            imageView1.setLayoutParams(params1);
-//            imageView1.setImageResource(R.drawable.gsw1);
-//            linearLayout.addView(imageView2);
-//
-//        Button button = new Button(this);
-//        button.setText("This Button is dynamically created");
-//
-//        // stuff that is added
-//
-//
-//        linearLayout.addView(button);
-//
-////        this.addContentView(scrollView, layoutParams);
-////        scrollView.addView(linearLayout);
-//
-//
-
-
-
-
-        // THIRD WAY?
-//            super.onCreate(savedInstanceState);
-//            setContentView(R.layout.activity_main);
-//
-//            ScrollView scrollView = new ScrollView(this);
-//            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-//            scrollView.setLayoutParams(layoutParams);
-//
-//            LinearLayout linearLayout = new LinearLayout(this);
-//            LinearLayout.LayoutParams linearParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//            linearLayout.setOrientation(LinearLayout.VERTICAL);
-//            linearLayout.setLayoutParams(linearParams);
-//
-//            scrollView.addView(linearLayout);
-
-//            ImageView imageView1 = new ImageView(this);
-//            LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//            params1.setMargins(0, 30, 0, 30);
-//            params1.gravity = Gravity.CENTER;
-//            imageView1.setLayoutParams(params1);
-//            imageView1.setImageResource(R.drawable.gsw1);
-//            linearLayout.addView(imageView1);
-//
-//            ImageView imageView2 = new ImageView(this);
-//            LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//            params2.setMargins(0, 0, 0, 30);
-//            params2.gravity = Gravity.CENTER;
-//            imageView2.setLayoutParams(params2);
-//            imageView2.setImageResource(R.drawable.gsw2);
-//            linearLayout.addView(imageView2);
-//
-//            ImageView imageView3 = new ImageView(this);
-//            LinearLayout.LayoutParams params3 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//            params3.setMargins(0, 0, 0, 30);
-//            params3.gravity = Gravity.CENTER;
-//            imageView3.setLayoutParams(params3);
-//            imageView3.setImageResource(R.drawable.gsw3);
-//            linearLayout.addView(imageView3);
-//
-//            ImageView imageView4 = new ImageView(this);
-//            LinearLayout.LayoutParams params4 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//            params4.setMargins(0, 0, 0, 30);
-//            params4.gravity = Gravity.CENTER;
-//            imageView4.setLayoutParams(params4);
-//            imageView4.setImageResource(R.drawable.gsw4);
-//            linearLayout.addView(imageView4);
-
-
-//            LinearLayout linearLayout1 = findViewById(R.id.rootContainer);
-//            if (linearLayout1 != null) {
-//                linearLayout1.addView(scrollView);
-//            }
-//        }
 
 
 

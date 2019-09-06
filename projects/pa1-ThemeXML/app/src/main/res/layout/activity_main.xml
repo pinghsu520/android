@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--The purpose of this file is to generate the XML for the project and create the info for the
+project all on one xml doc. Some unique additions include a ScrollView which allows users to pace
+through the
 
+Files Used Include:
+    colors.xml- used to change colors
+    strings.xml- used to call strings
+
+Let's go DUB nation!!!
+-->
+
+<!--This feature activates the scrollview for the user-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,27 +26,7 @@
         tools:context=".MainActivity"
         android:orientation="vertical">
 
-<!--        <EditText-->
-<!--            android:id="@+id/editText"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_marginStart="16dp"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            android:ems="10"-->
-<!--            android:hint="@string/rect"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:layout_marginBottom="50dp"/>-->
-
-<!--        <Button-->
-<!--            android:id="@+id/button"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginEnd="16dp"-->
-<!--            android:layout_marginRight="16dp"-->
-<!--            android:onClick="sendMessage"-->
-<!--            android:text="@string/lets_go"/>-->
-
+<!--        GSW Logo-->
         <ImageView
             android:id="@+id/lego"
             android:layout_width="400px"
@@ -44,14 +35,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"/>
 
-<!--        <Button-->
-<!--            android:id="@+id/button_2"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginEnd="16dp"-->
-<!--            android:layout_marginRight="16dp"-->
-<!--            android:onClick="displayImage"-->
-<!--            android:text="@string/display_image"/>-->
+<!--        Introduction to team-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,6 +45,7 @@
             android:textSize="35sp"
             android:textStyle="bold|italic"/>
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,7 +54,7 @@
             android:textSize="25sp"
             android:layout_margin="50dp"/>
 
-
+<!--        GSW as champions-->
         <ImageView
             android:id="@+id/champs"
             android:layout_width="1000px"
@@ -87,6 +72,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
 
+<!--        Steph Curry-->
         <ImageView
             android:id="@+id/steph"
             android:layout_width="1000px"
