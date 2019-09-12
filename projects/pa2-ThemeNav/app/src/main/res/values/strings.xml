@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ThemeXML</string>
+    <string name="app_name">ThemeNav</string>
     <string name="teamname">Golden State Warriors</string>
     <string name="intro">The Golden State Warriors are an American professional basketball team
         based in San Francisco. The Warriors compete in the National Basketball Association (NBA),
@@ -18,7 +18,6 @@
     </string>
 
 
-
     <string name="steph_info">
     The leader of the GSW,  Wardell Stephen "Steph" Curry II (born March 14, 1988) is an American
     professional basketball player for the Golden State Warriors of the National Basketball
@@ -26,5 +25,6 @@
     (MVP) twice and won three NBA championships with the Warriors. Many players and analysts
     have called him the greatest shooter in NBA history.
     </string>
+    <string name="title_activity_other">OtherActivity</string>
 
 </resources>

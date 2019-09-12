@@ -63,6 +63,18 @@ Let's go DUB nation!!!
             android:layout_gravity="center"
             />
 
+        <Button
+            android:id="@+id/team_button"
+            android:layout_gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:text="Team Members" />
+<!--            android:onClick="goToOtherActivity"-->
+<!--            />-->
+
+
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,6 +102,7 @@ Let's go DUB nation!!!
             android:textSize="25sp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
+
 
 
     </LinearLayout>
