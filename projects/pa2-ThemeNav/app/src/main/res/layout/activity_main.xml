@@ -46,15 +46,15 @@ Let's go DUB nation!!!
             android:textStyle="bold|italic"/>
 
 
+        <!--        GSW as champions-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="50dp"
             android:text="@string/intro"
             android:textColor="@color/blue"
-            android:textSize="25sp"
-            android:layout_margin="50dp"/>
+            android:textSize="25sp" />
 
-        <!--        GSW as champions-->
         <ImageView
             android:id="@+id/champs"
             android:layout_width="1000px"
@@ -84,6 +84,13 @@ Let's go DUB nation!!!
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
 
+
+        <Button
+            android:id="@+id/OakArena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="See the court!" />
+
         <!--        Steph Curry-->
         <ImageView
             android:id="@+id/steph"
@@ -102,6 +109,7 @@ Let's go DUB nation!!!
             android:textSize="25sp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
+
 
 
 
