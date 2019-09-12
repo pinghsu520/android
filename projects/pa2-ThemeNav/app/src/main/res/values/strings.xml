@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">pa2-ThemeNav</string>
+    <string name="app_name">ThemeXML</string>
+    <string name="teamname">Golden State Warriors</string>
+    <string name="intro">The Golden State Warriors are an American professional basketball team
+        based in San Francisco. The Warriors compete in the National Basketball Association (NBA),
+        as a member of the Western Conference Pacific Division. Founded in 1946 in
+        Philadelphia, the Warriors relocated to the San Francisco Bay Area in 1962 and took the
+        name of the city.</string>
+    <string name="rect">Type Here</string>
+
+    <string name="first_para">
+    The 2018 Finals pitted the Warriors against the Cavaliers for the fourth consecutive season;
+    this marked the first time in NBA history that the same two teams had met in the Finals for
+    four consecutive years. The Warriors swept the Cavaliers to win their second straight NBA
+    championship; previously, there had not been an NBA Finals sweep since 2007.
+    Following the 2018 NBA Finals, writers for Sports Illustrated,
+    USA Today described the Warriors as a dynasty.
+    </string>
+
+
+
+    <string name="steph_info">
+    The leader of the GSW,  Wardell Stephen "Steph" Curry II (born March 14, 1988) is an American
+    professional basketball player for the Golden State Warriors of the National Basketball
+    Association (NBA). A six-time NBA All-Star, he has been named the NBA Most Valuable Player
+    (MVP) twice and won three NBA championships with the Warriors. Many players and analysts
+    have called him the greatest shooter in NBA history.
+    </string>
+
 </resources>

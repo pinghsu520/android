@@ -1,18 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--The purpose of this file is to generate the XML for the project and create the info for the
+project all on one xml doc. Some unique additions include a ScrollView which allows users to pace
+through the
+
+Files Used Include:
+    colors.xml- used to change colors
+    strings.xml- used to call strings
+
+Let's go DUB nation!!!
+-->
+
+<!--This feature activates the scrollview for the user-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/green">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <!--        GSW Logo-->
+        <ImageView
+            android:id="@+id/lego"
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:src="@drawable/gswlogo"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"/>
+
+        <!--        Introduction to team-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/teamname"
+            android:textColor="@android:color/black"
+            android:textSize="35sp"
+            android:textStyle="bold|italic"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intro"
+            android:textColor="@color/blue"
+            android:textSize="25sp"
+            android:layout_margin="50dp"/>
+
+        <!--        GSW as champions-->
+        <ImageView
+            android:id="@+id/champs"
+            android:layout_width="1000px"
+            android:layout_height="1500px"
+            android:src="@drawable/gswchamps"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_para"
+            android:textColor="@color/red"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <!--        Steph Curry-->
+        <ImageView
+            android:id="@+id/steph"
+            android:layout_width="1000px"
+            android:layout_height="1500px"
+            android:src="@drawable/steph1"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/steph_info"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
