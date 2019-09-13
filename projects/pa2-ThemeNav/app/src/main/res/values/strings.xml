@@ -28,4 +28,20 @@
     <string name="title_activity_other">OtherActivity</string>
     <string name="title_activity_oakland_arena">OaklandArena</string>
 
+    <string name="info1">The arena was the home of the Golden State Warriors from 1971 to 2019,
+        except the one-year hiatus while the arena was undergoing renovations. The Oracle Arena has
+        hosted the 2015, 2016, 2017, 2018, and 2019 Finals where the Warriors won in 2015, 2017,
+        and 2018.</string>
+
+    <string name="info2">"The first picture is a angle that shows the overall court and its length and is a full nba size court.</string>
+
+    <string name="info3">This is a picture of the stadium from the inside. There are thousands of
+        seats of areas ranging from far to close to front row seats!.</string>
+
+    <string name="info4">This is a picture of the stadium from the outside. It has a circular/oval
+        shape and draws thousands of people per game.</string>
+
+    <string name="title_Oakland">The Oakland Arena</string>
+    <string name="title_Team">The Team Roster</string>
+
 </resources>

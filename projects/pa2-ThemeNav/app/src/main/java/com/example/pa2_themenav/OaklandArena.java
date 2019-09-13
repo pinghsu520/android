@@ -24,14 +24,18 @@ public class OaklandArena extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other);
 
+        String info1 = getResources().getString(R.string.info1);
+        String info2 = getResources().getString(R.string.info2);
+        String info3 = getResources().getString(R.string.info3);
+        String info4 = getResources().getString(R.string.info4);
 
 
         ListView playerListView = (ListView) findViewById(R.id.listView);
 
-        String[] array = {"The first picture is a angle that shows the overall court and its length" +
-                "and is a full nba size court.", "Chris Boucher", "Quinn Cook", "Stephen Curry",
-                "Kevin Durant", "Draymond Green", "Andre Iguodala", "Shaun Livingston", "Javale McGee",
-                "Klay Thompson", "David West", "Nick Young"};
+
+        String[] array = {info1, info2, info3, info4};
+//                "Draymond Green", "Andre Iguodala", "Shaun Livingston", "Javale McGee",
+//                "Klay Thompson", "David West", "Nick Young"};
 
         ArrayList<String> playerList = new ArrayList<String>(Arrays.asList(array));
         ArrayAdapter<String> arrayAdapter = new

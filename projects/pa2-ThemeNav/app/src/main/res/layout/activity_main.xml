@@ -66,9 +66,11 @@ Let's go DUB nation!!!
         <Button
             android:id="@+id/team_button"
             android:layout_gravity="center"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="60dp"
-            android:text="Team Members" />
+            android:text="Team Members"
+            android:background="@color/red"
+            android:textColor="@color/blue"/>
 <!--            android:onClick="goToOtherActivity"-->
 <!--            />-->
 
@@ -87,8 +89,11 @@ Let's go DUB nation!!!
 
         <Button
             android:id="@+id/OakArena"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:background="@color/red"
+            android:textColor="@color/blue"
             android:text="See the court!" />
 
         <!--        Steph Curry-->

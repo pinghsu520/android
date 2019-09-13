@@ -1,5 +1,8 @@
 package com.example.pa2_themenav;
 
+import android.app.ActionBar;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -24,8 +27,9 @@ public class OtherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other);
-
-
+//
+//        ActionBar bar = getActionBar();
+//        bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0000ff")));
 
         ListView playerListView = (ListView) findViewById(R.id.listView);
 
