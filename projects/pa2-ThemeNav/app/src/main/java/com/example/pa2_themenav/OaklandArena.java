@@ -1,10 +1,13 @@
 package com.example.pa2_themenav;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -17,6 +20,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
+/**
+ *
+ * The purpose of this file is to show the Oakland Arena listView starting from the pictures
+ * of each image and a description to help the user understand it *
+ *
+ */
 public class OaklandArena extends AppCompatActivity {
 
     @Override
@@ -24,18 +33,23 @@ public class OaklandArena extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other);
 
-        String info1 = getResources().getString(R.string.info1);
+        ActionBar bar = getSupportActionBar();
+        bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0000ff")));
+
+        // grabbed the text
+
+        String info1 = getResources().getString(R.string.info1);;
         String info2 = getResources().getString(R.string.info2);
-        String info3 = getResources().getString(R.string.info3);
+        String info3 = getResources().getString(R.string.info3);;
         String info4 = getResources().getString(R.string.info4);
 
 
         ListView playerListView = (ListView) findViewById(R.id.listView);
 
+        // adds string to use
 
         String[] array = {info1, info2, info3, info4};
-//                "Draymond Green", "Andre Iguodala", "Shaun Livingston", "Javale McGee",
-//                "Klay Thompson", "David West", "Nick Young"};
+
 
         ArrayList<String> playerList = new ArrayList<String>(Arrays.asList(array));
         ArrayAdapter<String> arrayAdapter = new
@@ -44,10 +58,7 @@ public class OaklandArena extends AppCompatActivity {
 
         playerListView.setAdapter(arrayAdapter);
 
-
-
-        // second view
-        // gotta change line 53 haha, right now getting player!
+        // maps dict to arraylist
 
         ListView shoppingImageListView = (ListView) findViewById(R.id.listView);
         int[] shoppingImageArray = new int[]{R.drawable.angle1, R.drawable.angle2, R.drawable.angle3, R.drawable.outside};
@@ -58,6 +69,8 @@ public class OaklandArena extends AppCompatActivity {
             hm.put("shopping_list_row_item", playerList.get(i));
             aList.add(hm);
         }
+
+        // maps from array and to array to the simple adapter
 
         String[] from = {"imageView", "shopping_list_row_item"};
         int[] to = {R.id.imageView, R.id.player_list_row};
