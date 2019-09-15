@@ -71,7 +71,7 @@ Let's go DUB nation!!!
             android:text="Team Members"
             android:background="@color/red"
             android:textColor="@color/blue"/>
-<!--            android:onClick="goToOtherActivity"-->
+            android:onClick="goToOtherActivity"
 <!--            />-->
 
 
