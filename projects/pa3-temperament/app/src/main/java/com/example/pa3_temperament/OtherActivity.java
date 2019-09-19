@@ -28,6 +28,7 @@ import java.util.Collections;
 public class OtherActivity extends AppCompatActivity {
 
     private int count=-1;
+    private ArrayList<Integer> score=new ArrayList<Integer>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,7 +106,16 @@ public class OtherActivity extends AppCompatActivity {
             TextView question = (TextView) findViewById(R.id.question);
             question.setText(answer.get(count));
             if(count==11){
-                openActivity2();
+                System.out.println(score);
+                Intent i = new Intent(OtherActivity.this, QuizSummary.class);
+                String listString="";
+                for (int s : score)
+                {
+                    listString += s + "\t";
+                }
+                i.putExtra("score",listString);
+                startActivity(i);
+//                openActivity2();
             }
 
     }
@@ -115,27 +125,37 @@ public class OtherActivity extends AppCompatActivity {
         View rdS2 = findViewById(R.id.rd_s2);
         View rdS3 =  findViewById(R.id.rd_s3);
         View rdS4 = findViewById(R.id.rd_s4);
-        Intent i = new Intent(OtherActivity.this, QuizSummary.class);
+//        Intent i = new Intent(OtherActivity.this, QuizSummary.class);
         RadioGroup rdgS=rdgS = (RadioGroup) findViewById(R.id.rdS1);
 
         switch (rdgS.getCheckedRadioButtonId()) {
             case R.id.rd_s1:
-
-                i.putExtra("score", 10);
+                score.add(0);
+//                System.out.println("hi");
+//                i.putExtra("score", 10);
                 break;
             case R.id.rd_s2:
-                i.putExtra("score1", 20);
+//                System.out.println("Second");
+//                i.putExtra("score1", 20);
+                score.add(1);
                 break;
             case R.id.rd_s3:
-                i.putExtra("score2", 30);
+//                i.putExtra("score2", 30);
+                score.add(2);
                 break;
             case R.id.rd_s4:
-                i.putExtra("score3", 40);
+//                i.putExtra("score3", 40);
+                score.add(3);
+                break;
+            case R.id.rd_s5:
+//                i.putExtra("score3", 40);
+                score.add(4);
                 break;
 
             default:
                 break;
         }
+//        startActivity(i);
 
 
 
