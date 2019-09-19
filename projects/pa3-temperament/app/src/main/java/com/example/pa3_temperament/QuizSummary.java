@@ -25,7 +25,8 @@ public class QuizSummary extends AppCompatActivity {
         }
         System.out.println("SECOND BENCHMARK");
 
-
+        // first stringindexat(1,3,5) is score for chloeric...
+        // second stringindex at 7,9,11 is melanchol...
 
 
     }
