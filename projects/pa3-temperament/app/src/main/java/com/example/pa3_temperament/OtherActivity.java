@@ -25,6 +25,8 @@ import java.util.Collections;
 
 public class OtherActivity extends AppCompatActivity {
 
+    private int count=-1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,7 @@ public class OtherActivity extends AppCompatActivity {
         Context context = getApplicationContext();
 
 
-        ArrayList<String> answer = new ArrayList<String>();
+        final ArrayList<String> answer = new ArrayList<String>();
 
         test = readRawTextFile(context, "choleric");
         String updated[] = test.split("\\r?\\n");
@@ -82,7 +84,7 @@ public class OtherActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openActivity2();
+                buttonClick(v, answer);
             }
         });
 
@@ -96,12 +98,14 @@ public class OtherActivity extends AppCompatActivity {
 
     public void buttonClick(View v, ArrayList<String> answer)
     {
-        System.out.print("HELLO");
-        for(int i=0;i<12;i++) {
-            TextView tv = (TextView) findViewById(R.id.question);
-            tv.setText(answer.get(i));
-            openActivity2();
-        }
+        count=count+1;
+        System.out.println(count);
+            TextView question = (TextView) findViewById(R.id.question);
+            question.setText(answer.get(count));
+            if(count==11){
+                openActivity2();
+            }
+
     }
 
     public String readRawTextFile(Context ctx, String title) {

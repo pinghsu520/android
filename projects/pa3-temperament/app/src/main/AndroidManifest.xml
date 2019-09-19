@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.pa3_temperament">
+    package="com.example.pa3_temperament"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="GoogleAppIndexingWarning">
 
     <application
         android:allowBackup="true"
@@ -9,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".QuizSummary"></activity>
+        <activity
+
+            android:name=".QuizSummary"
+            android:label="Your Results!"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
         <activity
             android:name=".OtherActivity"
             android:label="Quiz Time!"
