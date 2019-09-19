@@ -12,6 +12,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -105,6 +107,37 @@ public class OtherActivity extends AppCompatActivity {
             if(count==11){
                 openActivity2();
             }
+
+    }
+
+    public void onRadioButtonClicked(View view) {
+        View rdS1 = findViewById(R.id.rd_s1);
+        View rdS2 = findViewById(R.id.rd_s2);
+        View rdS3 =  findViewById(R.id.rd_s3);
+        View rdS4 = findViewById(R.id.rd_s4);
+        Intent i = new Intent(OtherActivity.this, QuizSummary.class);
+        RadioGroup rdgS=rdgS = (RadioGroup) findViewById(R.id.rdS1);
+
+        switch (rdgS.getCheckedRadioButtonId()) {
+            case R.id.rd_s1:
+
+                i.putExtra("score", 10);
+                break;
+            case R.id.rd_s2:
+                i.putExtra("score1", 20);
+                break;
+            case R.id.rd_s3:
+                i.putExtra("score2", 30);
+                break;
+            case R.id.rd_s4:
+                i.putExtra("score3", 40);
+                break;
+
+            default:
+                break;
+        }
+
+
 
     }
 

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">pa3-temperament</string>
     <string name="title_activity_other">OtherActivity</string>
+    <string name="firstans">Strongly Agree</string>
+    <string name="secondans">Partially Agree</string>
+    <string name="thirdans">Neutraly</string>
+    <string name="fourthans">Partially Disagree</string>
+    <string name="fifthans">Strongly Disagree</string>
+    <string name="into">Welcome to the Quiz!</string>
 </resources>

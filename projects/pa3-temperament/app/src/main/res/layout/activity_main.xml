@@ -9,7 +9,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is activity lifecycle!!"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:text="@string/into"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -21,8 +23,9 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:background="@color/red"
-        android:text="Team Members"
+        android:text="Let's START!"
         android:textColor="@color/blue"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="257dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="402dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
