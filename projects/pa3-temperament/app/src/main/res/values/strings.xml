@@ -3,8 +3,16 @@
     <string name="title_activity_other">OtherActivity</string>
     <string name="firstans">Strongly Agree</string>
     <string name="secondans">Partially Agree</string>
-    <string name="thirdans">Neutraly</string>
+    <string name="thirdans">Neutrally</string>
     <string name="fourthans">Partially Disagree</string>
+    <string name="warning">PLEASE make sure to click on the RadioButton EACH time (even though you might
+    want to select the same Radio Button!), press the button!</string>
     <string name="fifthans">Strongly Disagree</string>
-    <string name="into">Welcome to the Quiz!</string>
+    <string name="into">Welcome to the Temperament Quiz!</string>
+    <string name="all_description">To the observer, the Phlegmatic is extremely slow-paced and stubborn.
+        The Phlegmatic goes through life doing as little as possible, quietly, and expending little energy.
+        Sanguine personality type is described primarily as being highly talkative, enthusiastic, active, and social.
+        Someone who can be considered having the choleric temperament is strong-willed, active, extroverted, quick-tempered and impatient.
+        Melancholic individuals tend to be analytical and detail-oriented, and they are deep thinkers and feelers
+    </string>
 </resources>

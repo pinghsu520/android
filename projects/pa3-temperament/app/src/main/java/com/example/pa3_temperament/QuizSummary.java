@@ -62,6 +62,23 @@ public class QuizSummary extends AppCompatActivity {
         System.out.println("This is melancholic score"+melancholic);
         System.out.println("This is phlegmatic score"+phlegmatic);
         System.out.println("This is sanguine score"+sanguine);
+
+        if(maxval==choleric){
+            TextView txt_result5 = findViewById(R.id.finalTrait);
+            txt_result5.setText("Your Trait is: Choleric");
+        }
+        else if(maxval==melancholic){
+            TextView txt_result5= findViewById(R.id.finalTrait);
+            txt_result5.setText("Your Trait is: Melancholic");
+        }
+        else if(maxval==phlegmatic){
+            TextView txt_result6 = findViewById(R.id.finalTrait);
+            txt_result6.setText("Your Trait is: Phlegmatic");
+        }
+        else{
+            TextView txt_result7 = findViewById(R.id.finalTrait);
+            txt_result7.setText("Your Trait is: Sanguine");
+        }
         // second stringindex at 7,9,11 is melanchol...
 
 

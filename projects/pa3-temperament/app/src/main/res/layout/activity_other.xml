@@ -79,5 +79,20 @@
 
     </RadioGroup>
 
+    <TextView
+
+        android:id="@+id/finalTrait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="425dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/warning"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        />
+
 </RelativeLayout>
 

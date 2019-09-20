@@ -2,12 +2,29 @@
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-
+    android:background="@color/green"
     tools:context=".MainActivity"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+
+        android:text="@string/all_description"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        />
+
     <TextView
 
         android:id="@+id/finalScore"
@@ -15,12 +32,27 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="253dp"
+
         android:text="Your final score is: "
         android:textColor="@color/black"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold|italic"
         />
+
+    <TextView
+
+        android:id="@+id/finalTrait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+
+        android:text="Your trait is: "
+        android:textColor="@color/blue"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        />
+
     <TextView
 
         android:id="@+id/cholericScore"
@@ -31,7 +63,7 @@
 
         android:text="Your choleric score is: "
         android:textColor="@color/black"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold|italic"
         />
     <TextView
@@ -44,7 +76,7 @@
 
         android:text="Your melancholic score is: "
         android:textColor="@color/black"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold|italic"
         />
 
@@ -58,7 +90,7 @@
 
         android:text="Your phlegmatic score is: "
         android:textColor="@color/black"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold|italic"
         />
 
@@ -72,7 +104,7 @@
 
         android:text="Your sanguine score is: "
         android:textColor="@color/black"
-        android:textSize="35sp"
+        android:textSize="30sp"
         android:textStyle="bold|italic"
         />
 
