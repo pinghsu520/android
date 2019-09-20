@@ -13,52 +13,71 @@
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginTop="253dp"
-        android:text="The following contains a series of a 12-question exam. You ready?"
+        android:gravity="center|top"
         android:textColor="@color/black"
         android:textSize="35sp"
         android:textStyle="bold|italic" />
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/rdS1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <RadioButton android:id="@+id/rd_s1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/firstans"
-            android:onClick="onRadioButtonClicked"/>
-        <RadioButton android:id="@+id/rd_s2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/secondans"
-            android:onClick="onRadioButtonClicked"/>
-        <RadioButton android:id="@+id/rd_s3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/thirdans"
-            android:onClick="onRadioButtonClicked"/>
-        <RadioButton android:id="@+id/rd_s4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fourthans"
-            android:onClick="onRadioButtonClicked"/>
-        <RadioButton android:id="@+id/rd_s5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fifthans"
-            android:onClick="onRadioButtonClicked"/>
 
-    </RadioGroup>
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="244dp"
+        android:layout_marginBottom="170dp"
         android:clickable="true"
+
         android:onClick="buttonClick"
-        android:text="Button" />
+        android:text="Continue On!" />
+
+    <RadioGroup
+        android:id="@+id/rdS1"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RadioButton
+            android:id="@+id/rd_s1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:onClick="onRadioButtonClicked"
+
+            android:text="@string/firstans" />
+
+        <RadioButton
+            android:id="@+id/rd_s3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/thirdans" />
+
+        <RadioButton
+            android:id="@+id/rd_s4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/fourthans" />
+
+        <RadioButton
+            android:id="@+id/rd_s5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/fifthans" />
+
+        <RadioButton
+            android:id="@+id/rd_s2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/secondans" />
+
+    </RadioGroup>
 
 </RelativeLayout>
 
