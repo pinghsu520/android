@@ -21,7 +21,7 @@
         android:layout_gravity="center"
         android:background="@color/pink"
         android:layout_marginBottom="20dp"
-        android:text="Share to Friend"
+        android:text="Share with Friends"
         android:textColor="@color/black" />
 
     <LinearLayout
