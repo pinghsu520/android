@@ -45,12 +45,12 @@ public class MainActivity<btnshare> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 System.out.println("GOT TO BUTTON!");
-                takeScreenshot();
-                if (!sharePath.equals("no")) {
-                    System.out.print("REACHED HERE");
+//                takeScreenshot();
+//                if (!sharePath.equals("no")) {
+//                    System.out.print("REACHED HERE");
 
                     share(sharePath);
-                }
+//                }
             }
         });
         View iv = findViewById(R.id.top);
@@ -94,7 +94,7 @@ public class MainActivity<btnshare> extends AppCompatActivity {
 
     private void share(String sharePath){
         File file = new File(sharePath);
-        Uri uri = Uri.fromFile(file);
+        Uri uri = currentPhotoUri;
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent .setType("image/*");
         intent .putExtra(Intent.EXTRA_STREAM, uri);
