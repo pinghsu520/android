@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wholePic"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_margin="20dp"
+
     android:background="@color/green"
     android:layout_height="match_parent">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+
         android:layout_weight="1"
         android:text="Collage Creator"
-        android:textSize="32dp"
+        android:textSize="62dp"
+        android:style="@style/Italic"
+
         android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/share"
-        android:layout_width="156dp"
+        android:layout_width="192dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/pink"
         android:layout_marginBottom="20dp"
+        android:background="@color/pink"
         android:text="Share with Friends"
 
         android:textColor="@color/black" />

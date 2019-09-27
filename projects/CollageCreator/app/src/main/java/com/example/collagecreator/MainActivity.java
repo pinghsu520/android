@@ -58,39 +58,6 @@ public class MainActivity<btnshare> extends AppCompatActivity {
     }
 
 
-        private void takeScreenshot() {
-        Date now = new Date();
-        DateFormat.format("yyyy-MM-dd_hh:mm:ss", now);
-
-        try {
-
-            // image naming and path  to include sd card  appending name you choose for file
-            String mPath = Environment.getExternalStorageDirectory().toString() + "/" + now + ".jpeg";
-
-            View v1 = getWindow().getDecorView().getRootView();
-            v1.setDrawingCacheEnabled(true);
-            Bitmap bitmap = Bitmap.createBitmap(v1.getDrawingCache());
-            v1.setDrawingCacheEnabled(false);
-
-            File imageFile = new File(mPath);
-
-            FileOutputStream outputStream = new FileOutputStream(imageFile);
-            int quality = 100;
-            bitmap.compress(Bitmap.CompressFormat.JPEG, quality, outputStream);
-            outputStream.flush();
-            outputStream.close();
-
-            String filePath = imageFile.getPath();
-            System.out.println("THE FILE PATH IS: "+filePath);
-            Bitmap ssbitmap = BitmapFactory.decodeFile(imageFile.getAbsolutePath());
-            iv.setImageBitmap(ssbitmap);
-            sharePath = filePath;
-
-        } catch (Throwable e) {
-            // Several error may come out with file handling or DOM
-            e.printStackTrace();
-        }
-    }
 
     private void share(String sharePath){
         File file = new File(sharePath);
