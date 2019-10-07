@@ -30,6 +30,9 @@
             android:textColor="@color/red"
             android:textSize="30dp"
             android:color="#66FF0000"
+            android:textOff="Toggle Button OFF"
+            android:textOn="Toggle Button ON "
+            android:background="@drawable/buttontoggle"
             android:text="@string/delay"></Button>
     </LinearLayout>
 

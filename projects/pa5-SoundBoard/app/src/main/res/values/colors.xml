@@ -12,6 +12,8 @@
     <color name="black">#000000</color>
     <color name="ghostwhite"> #f8f8ff</color>
 
+    <color name="gold">#e6b121</color>
+    <color name="grey">#cccccc</color>
 
 
 </resources>
