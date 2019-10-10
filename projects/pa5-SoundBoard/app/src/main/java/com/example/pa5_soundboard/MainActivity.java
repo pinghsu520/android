@@ -2,17 +2,45 @@ package com.example.pa5_soundboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    int count=0;
+    Button theTopOne;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        theTopOne=(Button) findViewById(R.id.delay);
+
+        theTopOne.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                count++;
+                System.out.println("COUNT: "+count);
+                if(count==1){
+                    System.out.println("yellow");
+                    theTopOne.setBackgroundColor(Color.parseColor("#e6b121"));
+                }
+                else if(count==2){
+                    System.out.println("green");
+                    theTopOne.setBackgroundColor(Color.parseColor("#39ff14"));
+                }
+                else {
+                    System.out.println("red");
+                    theTopOne.setBackgroundColor(Color.parseColor("#ff0000"));
+                    count-=3;
+                }
+
+            }
+            });
 
 
         Button one = (Button) this.findViewById(R.id.button1);

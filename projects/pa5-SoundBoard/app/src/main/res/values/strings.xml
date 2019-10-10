@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">pa5-SoundBoard</string>
     <string name="intro">The Zoo</string>
-    <string name="elephanttrumpet">Elephant trunk</string>
+    <string name="elephanttrumpet">Elephant   trunk</string>
     <string name="polargrowl">Polar bear growl </string>
     <string name="tigersnarl">Snarl of a Tiger</string>
     <string name="wolfhowl">Howl of a Wolf</string>
