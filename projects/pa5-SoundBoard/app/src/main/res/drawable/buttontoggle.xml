@@ -4,10 +4,10 @@
         android:color="@color/green"
         android:state_selected="true"/>
     <item
-        android:color="@color/gold"
+        android:color="@color/pink"
         android:state_pressed="true"/>
     <item
-        android:color="@color/pink"
+        android:color="@color/ghostwhite"
         android:state_focused="false"
         android:state_pressed="false"
         android:state_selected="false"/>

@@ -27,13 +27,13 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:alpha="0.25"
-            android:textColor="@color/red"
             android:textSize="30dp"
             android:color="#66FF0000"
             android:textOff="Toggle Button OFF"
             android:textOn="Toggle Button ON "
             android:background="@color/red"
             android:id="@+id/delay"
+            android:textColor="@drawable/buttontoggle"
             android:text="@string/delay"></Button>
     </LinearLayout>
 
