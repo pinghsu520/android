@@ -6,6 +6,7 @@
     android:background="@drawable/tiger"
     tools:context=".MainActivity" >
 
+<!--    Creating the orgnaization of the android layout-->
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -13,6 +14,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
+<!--        The Zoo Title-->
         <TextView
             android:layout_width="170dp"
             android:layout_height="wrap_content"
@@ -22,6 +24,7 @@
             android:textColor="@color/green"
             android:textSize="60dp" />
 
+<!--        Button for delay-->
         <Button
             android:layout_width="60dp"
             android:layout_height="fill_parent"
@@ -37,12 +40,15 @@
             android:text="@string/delay"></Button>
     </LinearLayout>
 
+
+<!--    Creates all 4 buttons side by side-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:orientation="horizontal" >
 
+<!--        tiger snarl-->
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -56,6 +62,7 @@
         >
         </Button>
 
+<!--        polar bear growl-->
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -68,6 +75,8 @@
             android:alpha="0.25"
             >
         </Button>
+
+<!--        bottom row for the buttons-->
     </LinearLayout>
 
     <LinearLayout
@@ -76,6 +85,8 @@
         android:layout_weight="1"
         android:orientation="horizontal" >
 
+
+<!--        wolf howl-->
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -90,6 +101,7 @@
             >
         </Button>
 
+<!--        elephant trunk noise-->
         <Button
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
