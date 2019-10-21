@@ -3,6 +3,17 @@ package com.example.pa6flickr;
 import android.app.IntentService;
 import android.content.Intent;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.Messenger;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in
@@ -12,80 +23,86 @@ import android.content.Context;
  * helper methods.
  */
 public class ImageService extends IntentService {
-    // TODO: Rename actions, choose action names that describe tasks that this
-    // IntentService can perform, e.g. ACTION_FETCH_NEW_ITEMS
-    private static final String ACTION_FOO = "com.example.pa6flickr.action.FOO";
-    private static final String ACTION_BAZ = "com.example.pa6flickr.action.BAZ";
 
-    // TODO: Rename parameters
-    private static final String EXTRA_PARAM1 = "com.example.pa6flickr.extra.PARAM1";
-    private static final String EXTRA_PARAM2 = "com.example.pa6flickr.extra.PARAM2";
+
+    Handler handler;
 
     public ImageService() {
-        super("ImageService");
+        super("ImageFetcherService");
     }
 
-    /**
-     * Starts this service to perform action Foo with the given parameters. If
-     * the service is already performing a task this action will be queued.
-     *
-     * @see IntentService
-     */
-    // TODO: Customize helper method
-    public static void startActionFoo(Context context, String param1, String param2) {
-        Intent intent = new Intent(context, ImageService.class);
-        intent.setAction(ACTION_FOO);
-        intent.putExtra(EXTRA_PARAM1, param1);
-        intent.putExtra(EXTRA_PARAM2, param2);
-        context.startService(intent);
+    public ImageService(String name) {
+        super(name);
     }
 
-    /**
-     * Starts this service to perform action Baz with the given parameters. If
-     * the service is already performing a task this action will be queued.
-     *
-     * @see IntentService
-     */
-    // TODO: Customize helper method
-    public static void startActionBaz(Context context, String param1, String param2) {
-        Intent intent = new Intent(context, ImageService.class);
-        intent.setAction(ACTION_BAZ);
-        intent.putExtra(EXTRA_PARAM1, param1);
-        intent.putExtra(EXTRA_PARAM2, param2);
-        context.startService(intent);
+    @Override
+    public void onCreate() {
+        handler = new Handler();
+        super.onCreate();
     }
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        if (intent != null) {
-            final String action = intent.getAction();
-            if (ACTION_FOO.equals(action)) {
-                final String param1 = intent.getStringExtra(EXTRA_PARAM1);
-                final String param2 = intent.getStringExtra(EXTRA_PARAM2);
-                handleActionFoo(param1, param2);
-            } else if (ACTION_BAZ.equals(action)) {
-                final String param1 = intent.getStringExtra(EXTRA_PARAM1);
-                final String param2 = intent.getStringExtra(EXTRA_PARAM2);
-                handleActionBaz(param1, param2);
+        Bundle bundle = intent.getExtras();
+        if (bundle == null) {
+            return;
+        }
+
+        Messenger messenger = (Messenger) bundle.get("MESSENGER");
+        String url_c1=(String) bundle.get("test1");
+        String url_c2=(String) bundle.get("test2");
+        String toDisplay=url_c1;
+
+
+        Bitmap image=getBitmapFromURL(url_c1);
+        Bitmap image2=getBitmapFromURL(url_c2);
+        Message msg=Message.obtain();
+        Message msg2=Message.obtain();
+        msg.obj=image;
+        msg2.obj=image2;
+
+            try {
+                messenger.send(msg);
+                messenger.send(msg2);
+                Thread.sleep(500);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
+
+
+
+    }
+
+    public static Bitmap getBitmapFromURL(String src) {
+        try {
+            URL url = new URL(src);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoInput(true);
+            connection.connect();
+            InputStream input = connection.getInputStream();
+            Bitmap myBitmap = BitmapFactory.decodeStream(input);
+            return myBitmap;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
         }
     }
+//    @Override
+//    protected void onHandleIntent(Intent intent) {
+//        if (intent != null) {
+//            final String action = intent.getAction();
+//            if (ACTION_FOO.equals(action)) {
+//                final String param1 = intent.getStringExtra(EXTRA_PARAM1);
+//                final String param2 = intent.getStringExtra(EXTRA_PARAM2);
+//                handleActionFoo(param1, param2);
+//            } else if (ACTION_BAZ.equals(action)) {
+//                final String param1 = intent.getStringExtra(EXTRA_PARAM1);
+//                final String param2 = intent.getStringExtra(EXTRA_PARAM2);
+//                handleActionBaz(param1, param2);
+//            }
+//        }
+//    }
 
-    /**
-     * Handle action Foo in the provided background thread with the provided
-     * parameters.
-     */
-    private void handleActionFoo(String param1, String param2) {
-        // TODO: Handle action Foo
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
 
-    /**
-     * Handle action Baz in the provided background thread with the provided
-     * parameters.
-     */
-    private void handleActionBaz(String param1, String param2) {
-        // TODO: Handle action Baz
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+
 }

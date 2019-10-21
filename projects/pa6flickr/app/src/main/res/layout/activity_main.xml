@@ -13,14 +13,13 @@
         android:id="@+id/outer_layout"
         tools:context=".MainActivity">
 
-        <TextView
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/i"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#005588"
-            android:id="@+id/title"
-            android:layout_marginBottom="20dp"
-            android:textSize="35dp" />
+            android:src="@mipmap/ic_launcher_round"
+            />
+
 
         <ImageView
             android:id="@+id/image1"
@@ -28,11 +27,32 @@
             android:layout_height="wrap_content"
             />
 
+        <TextView
+            android:id="@+id/firstdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#005588"
+            android:layout_marginBottom="20dp"
+            android:textSize="35dp" />
+
+        <TextView
+            android:id="@+id/firsttag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#005588"
+            android:layout_marginBottom="20dp"
+            android:textSize="35dp" />
+
         <ImageView
             android:id="@+id/image2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="SetNewImages"
             />
+
+
 
     </LinearLayout>
 </ScrollView>
