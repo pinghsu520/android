@@ -22,5 +22,17 @@
             android:layout_marginBottom="20dp"
             android:textSize="35dp" />
 
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
     </LinearLayout>
 </ScrollView>
