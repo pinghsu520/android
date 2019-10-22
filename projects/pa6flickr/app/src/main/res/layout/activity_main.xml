@@ -1,59 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/outer_layout"
-        tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/image1"
 
-        <ImageView
-            android:id="@+id/goNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="clicked_image"
-            android:src="@mipmap/ic_launcher_round"
-            />
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
+    <ImageView
+        android:id="@+id/image2"
 
-        <ImageView
-            android:id="@+id/image1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-
-        <TextView
-            android:id="@+id/firstdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#005588"
-            android:layout_marginBottom="20dp"
-            android:textSize="35dp" />
-
-        <TextView
-            android:id="@+id/firsttag"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#005588"
-            android:layout_marginBottom="20dp"
-            android:textSize="35dp" />
-
-        <ImageView
-            android:id="@+id/image2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            />
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toBottomOf="@+id/image1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
 
+    <ImageView
+        android:id="@+id/goNext"
+        android:layout_width="88dp"
+        android:layout_height="239dp"
+        android:onClick="clicked_image"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
-</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
