@@ -4,6 +4,7 @@ package com.example.pa6flickr;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,6 +15,7 @@ import android.os.Message;
 import android.os.Messenger;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -35,20 +37,23 @@ public class MainActivity extends AppCompatActivity {
     String url_c1;
     String url_c2;
     private int i=0;
+    Button goNext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         itself = this;
+
         new DownloadTask().execute();
     }
 
-
-
-    public void SetNewImages(View v) {
-
-        System.out.println("MADE IT!");
+    public void clicked_image(View v){
+        if(v.getId()==R.id.goNext){
+            System.out.println("hi");
+        }
     }
+
+
 
     public void onAttachedToWindow(String url_c1, String url_c2) {
 

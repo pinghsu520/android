@@ -14,9 +14,10 @@
         tools:context=".MainActivity">
 
         <ImageView
-            android:id="@+id/i"
+            android:id="@+id/goNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="clicked_image"
             android:src="@mipmap/ic_launcher_round"
             />
 
@@ -49,7 +50,7 @@
             android:id="@+id/image2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="SetNewImages"
+
             />
 
 
