@@ -148,6 +148,24 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("THIS IS FIRST ULR!!!"+url_c2);
                 onAttachedToWindow(url_c1,url_c2);
 
+                TextView firstdate = (TextView)findViewById(R.id.textView);
+                firstdate.setText(dateupload1);
+
+
+                TextView secondate = (TextView)findViewById(R.id.textView7);
+                secondate.setText(dateupload2);
+
+                System.out.println(image1);
+                System.out.println("first tag"+tags1);
+                System.out.println("sec tag"+tags2);
+
+                TextView firsttag = (TextView)findViewById(R.id.textView3);
+                firsttag.setText(tags1);
+
+
+                TextView secondtag = (TextView)findViewById(R.id.textView6);
+                secondtag.setText(tags2);
+
 //
 //                ImageView firstimage = findViewById(R.id.image1);
 //                ImageView secondimage = findViewById(R.id.image2);
