@@ -13,100 +13,89 @@ import android.view.ViewGroup;
 import com.example.newssearch.MainActivity;
 import com.example.newssearch.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link start.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link start#newInstance} factory method to
- * create an instance of this fragment.
- */
+
+
+import android.app.Activity;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import androidx.fragment.app.Fragment;
+
+import java.util.ArrayList;
+
 public class start extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Activity containerActivity = null;
+    private View inflatedView = null;
 
-    private OnFragmentInteractionListener mListener;
+    private ListView contactsListView;
+    ArrayAdapter<String> contactsAdapter = null;
+    private ArrayList<String> contacts = new ArrayList<String>();
 
-    public start() {
-        // Required empty public constructor
-    }
+    public start() { }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment start.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static start newInstance(String param1, String param2) {
-        start fragment = new start();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public void setContainerActivity(Activity containerActivity) {
+        this.containerActivity = containerActivity;
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater,
+                             ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_start, container, false);
-    }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
+        // file that ocntains listview
+        inflatedView = inflater.inflate(R.layout.fragment_start, container, false);
+
+        return inflatedView;
     }
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+    public void onCreate(Bundle savedInstance){
+        super.onCreate(savedInstance);
+        setupContactsAdapter();
     }
 
     @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
+    public void onResume() {
+        super.onResume();
+
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+//    public void getContacts() {
+//        int limit = 1000;
+//        Cursor cursor = containerActivity.getContentResolver().query(
+//                ContactsContract.Contacts.CONTENT_URI,null, null, null, null);
+//        while (cursor.moveToNext() && limit > 0) {
+//            String contactId = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
+//            String given = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
+//            String contact = given + " :: " + contactId;
+//            contacts.add(contact);
+//            limit--;
+//        }
+//        cursor.close();
+//    }
+
+    private void setupContactsAdapter() {
+        // R.id.listNews- list of news
+        System.out.println("FIRST");
+        contactsListView =
+                (ListView)containerActivity.findViewById(R.id.listNews);
+        // R.layout. = xml file that is the row
+        // R. id =textview in row
+        System.out.println("SECOND");
+        contactsAdapter = new
+                ArrayAdapter<String>(containerActivity, R.layout.list_row,
+                R.id.title, contacts);
+        System.out.println("third");
+        contactsListView.setAdapter(contactsAdapter);
+//        MainActivity.DownloadNews newsTask = new MainActivity.DownloadNews();
+//        newsTask.execute();
     }
+
 }

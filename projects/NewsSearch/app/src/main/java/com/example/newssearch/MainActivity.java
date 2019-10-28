@@ -66,17 +66,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+//        start gFrag = new start();
+//        gFrag.setContainerActivity(this);
+//
+//
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//
+//        transaction.add(R.id.blah, gFrag);
+//        transaction.addToBackStack(null);
+//        transaction.commit();
+//
+
+
         listNews = findViewById(R.id.listNews);
         loader = findViewById(R.id.loader);
         listNews.setEmptyView(loader);
 
 
-        if (Function.isNetworkAvailable(getApplicationContext())) {
-            DownloadNews newsTask = new DownloadNews();
-            newsTask.execute();
-        } else {
-            Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_LONG).show();
-        }
+        DownloadNews newsTask = new DownloadNews();
+        newsTask.execute();
+
 
     }
 
@@ -86,7 +97,8 @@ public class MainActivity extends AppCompatActivity {
         protected void onPreExecute() { super.onPreExecute(); }
 
         protected String doInBackground(String... args) {
-            String xml = Function.excuteGet("https://newsapi.org/v1/articles?source=" + NEWS_SOURCE + "&sortBy=top&apiKey=" + API_KEY);
+//            String xml = Function.excuteGet("https://newsapi.org/v1/articles?source=" + NEWS_SOURCE + "&sortBy=top&apiKey=" + API_KEY);
+            String xml = Function.excuteGet("https://newsapi.org/v2/everything?sortBy=publishedAt&q=tesla&from=2019-10-19&apiKey=530a5c059857443595116cf3702a1463");
             return xml;
         }
 
