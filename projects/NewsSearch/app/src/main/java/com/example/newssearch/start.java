@@ -67,19 +67,7 @@ public class start extends Fragment {
 
     }
 
-//    public void getContacts() {
-//        int limit = 1000;
-//        Cursor cursor = containerActivity.getContentResolver().query(
-//                ContactsContract.Contacts.CONTENT_URI,null, null, null, null);
-//        while (cursor.moveToNext() && limit > 0) {
-//            String contactId = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
-//            String given = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
-//            String contact = given + " :: " + contactId;
-//            contacts.add(contact);
-//            limit--;
-//        }
-//        cursor.close();
-//    }
+
 
     private void setupContactsAdapter() {
         // R.id.listNews- list of news

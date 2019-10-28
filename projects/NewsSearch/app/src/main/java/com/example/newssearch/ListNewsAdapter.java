@@ -43,7 +43,7 @@ class ListNewsAdapter extends BaseAdapter {
             holder = new ListNewsViewHolder();
             convertView = LayoutInflater.from(activity).inflate(
                     R.layout.list_row, parent, false);
-            holder.galleryImage = (ImageView) convertView.findViewById(R.id.galleryImage);
+
             holder.author = (TextView) convertView.findViewById(R.id.author);
             holder.title = (TextView) convertView.findViewById(R.id.title);
             holder.sdetails = (TextView) convertView.findViewById(R.id.sdetails);
@@ -52,7 +52,7 @@ class ListNewsAdapter extends BaseAdapter {
         } else {
             holder = (ListNewsViewHolder) convertView.getTag();
         }
-        holder.galleryImage.setId(position);
+
         holder.author.setId(position);
         holder.title.setId(position);
         holder.sdetails.setId(position);
@@ -67,16 +67,13 @@ class ListNewsAdapter extends BaseAdapter {
             holder.time.setText(song.get(MainActivity.KEY_PUBLISHEDAT));
             holder.sdetails.setText(song.get(MainActivity.KEY_DESCRIPTION));
 
-            if(song.get(MainActivity.KEY_URLTOIMAGE).toString().length() < 5)
-            {
-                holder.galleryImage.setVisibility(View.GONE);
-            }
+
         }catch(Exception e) {}
         return convertView;
     }
 }
 
 class ListNewsViewHolder {
-    ImageView galleryImage;
+
     TextView author, title, sdetails, time;
 }

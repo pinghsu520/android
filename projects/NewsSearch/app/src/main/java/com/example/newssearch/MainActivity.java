@@ -138,8 +138,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-            } else {
-                Toast.makeText(getApplicationContext(), "No news found", Toast.LENGTH_SHORT).show();
             }
         }
     }
