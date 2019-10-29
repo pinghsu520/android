@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eae3d33f-d735-40a9-b190-83389b694be3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../projects/CollageMaker/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/CollageMaker/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../projects/CollageMaker/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/CollageMaker/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../projects/CollageMaker/app/src/main/java/com/example/collagemaker/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/CollageMaker/app/src/main/java/com/example/collagemaker/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../projects/CollageMaker/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/CollageMaker/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../projects/NewsSearch/app/src/main/java/com/example/newssearch/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/NewsSearch/app/src/main/java/com/example/newssearch/MainActivity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tasks/app/src/main/java/com/benjdd/tasks/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="71" column="53" lean-forward="true" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
+            <state relative-caret-position="-1989">
+              <caret line="71" column="53" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -49,9 +46,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="313" />
-    <option name="width" value="1853" />
+    <option name="x" value="66" />
+    <option name="y" value="312" />
+    <option name="width" value="1854" />
     <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -60,97 +57,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Tasks-v3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tasks-v3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tasks-v3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tasks-v3" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tasks-v3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tasks-v3" type="462c0819:PsiDirectoryNode" />
-              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tasks-v3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tasks-v3" type="462c0819:PsiDirectoryNode" />
-              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tasks-v3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tasks-v3" type="462c0819:PsiDirectoryNode" />
-              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tasks-v3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tasks-v3" type="462c0819:PsiDirectoryNode" />
-              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tasks-v3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tasks-v3" type="462c0819:PsiDirectoryNode" />
-              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tasks-v3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tasks-v3" type="462c0819:PsiDirectoryNode" />
-              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tasks-v3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tasks-v3" type="462c0819:PsiDirectoryNode" />
-              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="benjdd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tasks-v3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tasks-v3" type="462c0819:PsiDirectoryNode" />
-              <item name="Tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="benjdd" type="462c0819:PsiDirectoryNode" />
-              <item name="tasks" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../projects/CollageMaker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
@@ -179,18 +94,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="313" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19016394" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18968935" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
       <window_info id="Resources Explorer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="0" visible="true" weight="0.24190065" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="0" visible="true" weight="0.2407932" />
       <window_info anchor="bottom" id="TODO" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.329429" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
@@ -202,8 +116,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Tasks/app/src/main/java/com/benjdd/tasks/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="71" column="53" lean-forward="true" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
+        <state relative-caret-position="-1989">
+          <caret line="71" column="53" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
         </state>
       </provider>
     </entry>

@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/blah"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/hi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:shadowColor="#000"
-        android:shadowRadius="1.0"
-        android:textColor="#666666"
-        android:textSize="17sp"
-        android:layout_marginBottom="5dp"
-        android:maxLines="2"
-        android:scrollHorizontally="true"
-        android:ellipsize="end"
-        android:text="HELLOHELLOHELLO"/>
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="TextView" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/input"
+        android:text="type in here!"
+        android:singleLine="true"
+        android:inputType="textCapWords"/>
 
     <ListView
         android:id="@+id/listNews"
@@ -28,16 +33,10 @@
         android:background="#FFFFFF"
         android:divider="#F5F5F5"
         android:dividerHeight="1dp"
-        android:visibility="visible"
-        />
+        android:visibility="visible">
 
 
-
-    <ProgressBar
-        android:id="@+id/loader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+    </ListView>
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

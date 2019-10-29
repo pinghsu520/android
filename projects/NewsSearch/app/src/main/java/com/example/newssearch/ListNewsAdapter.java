@@ -62,10 +62,10 @@ class ListNewsAdapter extends BaseAdapter {
         song = data.get(position);
 
         try{
-            holder.author.setText(song.get(MainActivity.KEY_AUTHOR));
-            holder.title.setText(song.get(MainActivity.KEY_TITLE));
-            holder.time.setText(song.get(MainActivity.KEY_PUBLISHEDAT));
-            holder.sdetails.setText(song.get(MainActivity.KEY_DESCRIPTION));
+            holder.author.setText(song.get(start.KEY_AUTHOR));
+            holder.title.setText(song.get(start.KEY_TITLE));
+            holder.time.setText(song.get(start.KEY_PUBLISHEDAT));
+            holder.sdetails.setText(song.get(start.KEY_DESCRIPTION));
 
 
         }catch(Exception e) {}
