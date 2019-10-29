@@ -31,6 +31,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -168,16 +169,35 @@ public class start extends Fragment {
 
 
 
-//                listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                    public void onItemClick(AdapterView<?> parent, View view,
-//                                            int position, long id) {
+                listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    public void onItemClick(AdapterView<?> parent, View view,
+                                            int position, long id) {
+
+                        // last part lol
+
 //                        Intent i = new Intent(getActivity(), DetailsActivity.class);
 //                        i.putExtra("url", dataList.get(+position).get(KEY_URL));
 //                        startActivity(i);
 //                    }
-//                });
+
+
+//                    SecondPage cif=new SecondPage();
+//                    Bundle bundle=new Bundle();
+//                    bundle.putString("display_text", "asd;lfkjasdflkj");
+//                    cif.setArguments(bundle);
+//
+//
+//                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//
+//                    transaction.replace(R.id.outer, cif);
+//                    transaction.addToBackStack(null);
+//                    transaction.commit();
+
+                });
+
 
             }
+
 
             super.onPostExecute(xml);
         }
