@@ -57,7 +57,7 @@ public class start extends Fragment {
 
     private ListView contactsListView;
     ArrayAdapter<String> contactsAdapter = null;
-    private ArrayList<String> contacts = new ArrayList<String>();
+    ArrayList<String> contacts = new ArrayList<String>();
 
     public start() { }
 
@@ -72,26 +72,15 @@ public class start extends Fragment {
 
         // file that ocntains listview
         inflatedView = inflater.inflate(R.layout.fragment_start, container, false);
+        new DownloadNews().execute();
+//        setupContactsAdapter();
 
         return inflatedView;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstance){
-        super.onCreate(savedInstance);
-
-        // WHERE THE CODE STARTS
 
 
-//        loader = findViewById(R.id.loader);
-//        listNews.setEmptyView(loader);
 
-
-        com.example.newssearch.DownloadNews newsTask = new com.example.newssearch.DownloadNews();
-        newsTask.execute();
-
-        setupContactsAdapter();
-    }
 
     @Override
     public void onResume() {
@@ -110,30 +99,39 @@ public class start extends Fragment {
         // R.layout. = xml file that is the row
         // R. id =textview in row
         System.out.println("SECOND");
+        System.out.println(contacts);
+
         contactsAdapter = new
                 ArrayAdapter<String>(containerActivity, R.layout.list_row,
                 R.id.title, contacts);
         System.out.println("third");
+
         contactsListView.setAdapter(contactsAdapter);
-//        MainActivity.DownloadNews newsTask = new MainActivity.DownloadNews();
-//        newsTask.execute();
+
+
     }
 
 
 
     class DownloadNews extends AsyncTask<String, Void, String> {
         @Override
-        protected void onPreExecute() { super.onPreExecute(); }
+        protected void onPreExecute() {
+            System.out.println ("ON PRE EXECUTE");
+            super.onPreExecute(); }
 
         protected String doInBackground(String... args) {
+            System.out.println("DO IN BACKGROUND");
 //            String xml = Function.excuteGet("https://newsapi.org/v1/articles?source=" + NEWS_SOURCE + "&sortBy=top&apiKey=" + API_KEY);
             String xml = Function.excuteGet("https://newsapi.org/v2/everything?sortBy=publishedAt&q=tesla&from=2019-10-19&apiKey=530a5c059857443595116cf3702a1463");
             return xml;
+
+
         }
 
         @Override
         protected void onPostExecute(String xml) {
 
+            System.out.println("BLAH BLAH BLAH");
             if (xml.length() > 10) { // Just checking if not empty
 
                 JSONObject jsonResponse = null;
@@ -159,22 +157,29 @@ public class start extends Fragment {
                         map.put(KEY_URLTOIMAGE, jsonObject.optString(KEY_URLTOIMAGE));
                         map.put(KEY_PUBLISHEDAT, jsonObject.optString(KEY_PUBLISHEDAT));
                         dataList.add(map);
+
+                        contacts.add( jsonObject.optString(KEY_DESCRIPTION));
                     }
+                    System.out.println("THIS IS LIST");
+                    System.out.println(dataList);
+                    System.out.println(contacts);
+
+                    setupContactsAdapter();
 
 
-                ListNewsAdapter adapter = new ListNewsAdapter(getActivity(), dataList);
-                listNews.setAdapter(adapter);
 
-                listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    public void onItemClick(AdapterView<?> parent, View view,
-                                            int position, long id) {
-                        Intent i = new Intent(getActivity(), DetailsActivity.class);
-                        i.putExtra("url", dataList.get(+position).get(KEY_URL));
-                        startActivity(i);
-                    }
-                });
+//                listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                    public void onItemClick(AdapterView<?> parent, View view,
+//                                            int position, long id) {
+//                        Intent i = new Intent(getActivity(), DetailsActivity.class);
+//                        i.putExtra("url", dataList.get(+position).get(KEY_URL));
+//                        startActivity(i);
+//                    }
+//                });
 
             }
+
+            super.onPostExecute(xml);
         }
     }
 
