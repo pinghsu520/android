@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 
 
-class SecondPage extends Fragment {
+public class SecondPage extends Fragment {
 
 
     public SecondPage() { }

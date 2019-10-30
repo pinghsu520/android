@@ -26,8 +26,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -36,10 +39,18 @@ import androidx.fragment.app.FragmentTransaction;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * The purpose of this class is to start the first fragment that displays a button, a textview, an
+ * editView, and a listview. The fragment calls on AsyncTask and uses an adapter to modify the
+ * listView. The listView displays the author and also the publisher of the website to the user and
+ * that is implemented with a ScrollView.
+ *
+ */
 public class start extends Fragment {
     String API_KEY = "8190df9eb51445228e397e4185311a66"; // ### YOUE NEWS API HERE ###
     String NEWS_SOURCE = "techcrunch";
@@ -52,7 +63,7 @@ public class start extends Fragment {
     static String KEY_PUBLISHEDAT = "publishedAt";
     ListView listNews;
     ProgressBar loader;
-
+    TextView outer;
     private Activity containerActivity = null;
     private View inflatedView = null;
 
@@ -60,12 +71,14 @@ public class start extends Fragment {
     ArrayAdapter<String> contactsAdapter = null;
     ArrayList<String> contacts = new ArrayList<String>();
 
+    String publicXML="https://newsapi.org/v2/everything?sortBy=publishedAt&q=arizona&from=2019-10-19&apiKey=530a5c059857443595116cf3702a1463";
+    Button button;
     public start() { }
 
     public void setContainerActivity(Activity containerActivity) {
         this.containerActivity = containerActivity;
     }
-
+    // Fragments use CreateView and thus uses an inflater to strap onto the fragment
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
@@ -74,11 +87,25 @@ public class start extends Fragment {
         // file that ocntains listview
         inflatedView = inflater.inflate(R.layout.fragment_start, container, false);
         new DownloadNews().execute();
-//        setupContactsAdapter();
+        button=(Button) inflatedView.findViewById(R.id.button);
 
+        // This button
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                System.out.println("hi");
+                String fname = ((EditText)inflatedView.findViewById(R.id.editText)).getText().toString();
+                System.out.println(fname);
+                String first="https://newsapi.org/v2/everything?sortBy=publishedAt&q=";
+                String second="&from=2019-10-19&apiKey=530a5c059857443595116cf3702a1463";
+                publicXML=first+fname+second;
+                contacts.clear();
+                new DownloadNews().execute();
+            }
+        });
         return inflatedView;
     }
-
 
 
 
@@ -122,15 +149,19 @@ public class start extends Fragment {
 
         protected String doInBackground(String... args) {
             System.out.println("DO IN BACKGROUND");
+            System.out.println(publicXML);
 //            String xml = Function.excuteGet("https://newsapi.org/v1/articles?source=" + NEWS_SOURCE + "&sortBy=top&apiKey=" + API_KEY);
-            String xml = Function.excuteGet("https://newsapi.org/v2/everything?sortBy=publishedAt&q=tesla&from=2019-10-19&apiKey=530a5c059857443595116cf3702a1463");
+            String xml = Function.excuteGet(publicXML);
             return xml;
 
 
         }
 
+
+
         @Override
         protected void onPostExecute(String xml) {
+
 
             System.out.println("BLAH BLAH BLAH");
             if (xml.length() > 10) { // Just checking if not empty
@@ -141,7 +172,11 @@ public class start extends Fragment {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
                 JSONArray jsonArray = jsonResponse.optJSONArray("articles");
+                System.out.println(jsonArray);
+                System.out.println ("BEFORE STORM");
+
 
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = null;
@@ -159,7 +194,19 @@ public class start extends Fragment {
                         map.put(KEY_PUBLISHEDAT, jsonObject.optString(KEY_PUBLISHEDAT));
                         dataList.add(map);
 
-                        contacts.add( jsonObject.optString(KEY_DESCRIPTION));
+                        try {
+                            System.out.println("MADEIT");
+                            JSONObject image1=jsonArray.getJSONObject(i);
+
+                            JSONObject test=image1.getJSONObject("source");
+
+                            String lastone=test.getString("name");
+                            contacts.add(lastone +"                "+"("+jsonObject.optString(KEY_AUTHOR)+")");
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+//                        contacts.add("(author: "+jsonObject.optString(KEY_AUTHOR)+")");
                     }
                     System.out.println("THIS IS LIST");
                     System.out.println(dataList);
@@ -168,11 +215,13 @@ public class start extends Fragment {
                     setupContactsAdapter();
 
 
-
+                listNews=(ListView) inflatedView.findViewById(R.id.listNews);
                 listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
 
+
+                        System.out.println("blah");
                         // last part lol
 
 //                        Intent i = new Intent(getActivity(), DetailsActivity.class);
@@ -181,17 +230,18 @@ public class start extends Fragment {
 //                    }
 
 
-//                    SecondPage cif=new SecondPage();
-//                    Bundle bundle=new Bundle();
-//                    bundle.putString("display_text", "asd;lfkjasdflkj");
-//                    cif.setArguments(bundle);
-//
-//
-//                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
-//
-//                    transaction.replace(R.id.outer, cif);
-//                    transaction.addToBackStack(null);
-//                    transaction.commit();
+                    SecondPage cif=new SecondPage();
+                    Bundle bundle=new Bundle();
+                    bundle.putString("display_text", "asd;lfkjasdflkj");
+                    cif.setArguments(bundle);
+
+
+                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    System.out.println("BLAH BLAH BLAH");
+                    transaction.replace(R.id.outer, cif);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    }
 
                 });
 
