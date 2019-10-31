@@ -12,6 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.newssearch.MainActivity;
 import com.example.newssearch.R;
 
+/**
+ *
+ * Purpose of thsi program is to show the webview , I did not have enough time to implement it
+ * However, it is mostly done!
+ */
 public class DetailsActivity extends AppCompatActivity {
     WebView webView;
     ProgressBar loader;
@@ -26,13 +31,13 @@ public class DetailsActivity extends AppCompatActivity {
         url = intent.getStringExtra("url");
         loader = findViewById(R.id.loader);
         webView = findViewById(R.id.webView);
-
+        // grab settings
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.getSettings().setUseWideViewPort(true);
         webView.setWebViewClient(new WebViewClient() {
-
+        // not necessary
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 loader.setVisibility(View.VISIBLE);
@@ -40,7 +45,7 @@ public class DetailsActivity extends AppCompatActivity {
 
                 return true;
             }
-
+        // finished page
             @Override
             public void onPageFinished(WebView view, final String url) {
                 loader.setVisibility(View.GONE);

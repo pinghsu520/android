@@ -22,59 +22,25 @@ import android.os.Bundle;
 
 import com.example.newssearch.R;
 
-
-//https://androstock.com/tutorials/create-a-news-app-on-android-android-studio.html
-
-//api key: 530a5c059857443595116cf3702a1463
-//public class MainActivity extends AppCompatActivity {
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//
-//
-//        start gFrag = new start();
-//        gFrag.setContainerActivity(this);
-//
-//
-//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//
-//        transaction.add(R.id.good_or_bad_layout, gFrag);
-//        transaction.addToBackStack(null);
-//        transaction.commit();
-//
-//    }
-//}
+// purpose of main is to call the fragment through transaction
 public class MainActivity extends AppCompatActivity {
-
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        // create first page
         start gFrag = new start();
         gFrag.setContainerActivity(this);
-
+        // implement transaction
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
+        // add second page
         transaction.add(R.id.format, gFrag);
         transaction.addToBackStack(null);
         transaction.commit();
-//
 
-
-
-
-    }
-
-
+  }
 
 }

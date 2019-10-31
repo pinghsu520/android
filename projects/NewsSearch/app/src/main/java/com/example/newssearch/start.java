@@ -116,7 +116,7 @@ public class start extends Fragment {
 
     }
 
-
+    // sets up contaact adapter for creation of dicitonary
 
     private void setupContactsAdapter() {
         // R.id.listNews- list of news
@@ -158,7 +158,7 @@ public class start extends Fragment {
         }
 
 
-
+        // purpose of this function is to get the json object and parse through the information
         @Override
         protected void onPostExecute(String xml) {
 
@@ -172,7 +172,7 @@ public class start extends Fragment {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
+                // The json response goes through object articles
                 JSONArray jsonArray = jsonResponse.optJSONArray("articles");
                 System.out.println(jsonArray);
                 System.out.println ("BEFORE STORM");
@@ -193,9 +193,9 @@ public class start extends Fragment {
                         map.put(KEY_URLTOIMAGE, jsonObject.optString(KEY_URLTOIMAGE));
                         map.put(KEY_PUBLISHEDAT, jsonObject.optString(KEY_PUBLISHEDAT));
                         dataList.add(map);
-
+                        // adds authors and information of fragment
                         try {
-                            System.out.println("MADEIT");
+
                             JSONObject image1=jsonArray.getJSONObject(i);
 
                             JSONObject test=image1.getJSONObject("source");
@@ -213,7 +213,7 @@ public class start extends Fragment {
                     System.out.println(contacts);
 
                     setupContactsAdapter();
-
+                // Updates the mouse click on the list news
 
                 listNews=(ListView) inflatedView.findViewById(R.id.listNews);
                 listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -229,18 +229,32 @@ public class start extends Fragment {
 //                        startActivity(i);
 //                    }
 
-
+                    // Creates second page, passes on information
                     SecondPage cif=new SecondPage();
                     Bundle bundle=new Bundle();
                     bundle.putString("display_text", "asd;lfkjasdflkj");
                     cif.setArguments(bundle);
 
-
+                    // implements fragment transaction
                     FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                     System.out.println("BLAH BLAH BLAH");
-                    transaction.replace(R.id.outer, cif);
+                    transaction.replace(R.id.initial, cif);
                     transaction.addToBackStack(null);
                     transaction.commit();
+
+
+                        // Last part, didn't have time to implement it! Clicking and leading to web page
+
+//
+//            listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                public void onItemClick(AdapterView<?> parent, View view,
+//                                        int position, long id) {
+//                    Intent i = new Intent(MainActivity.this, DetailsActivity.class);
+//                    i.putExtra("url", dataList.get(+position).get(KEY_URL));
+//                    startActivity(i);
+//                }
+
+
                     }
 
                 });

@@ -8,7 +8,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * Created by SHAJIB on 9/9/2019.
+ * Purpose of this class is to parse through/create a json array that we use later on to
+ * implement parts that we need from the JSON.
  */
 
 public class Function {
@@ -30,6 +31,7 @@ public class Function {
             connection.setDoInput(true);
             connection.setDoOutput(false);
 
+            // creates connection response including buffer reader
             InputStream is;
             int status = connection.getResponseCode();
             if (status != HttpURLConnection.HTTP_OK)
@@ -39,6 +41,8 @@ public class Function {
 
             BufferedReader rd = new BufferedReader(new InputStreamReader(is));
             String line;
+
+            // While there is a response it adds on to it
             StringBuffer response = new StringBuffer();
             while ((line = rd.readLine()) != null) {
                 response.append(line);
