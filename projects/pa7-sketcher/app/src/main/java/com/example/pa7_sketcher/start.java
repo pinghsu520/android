@@ -46,7 +46,7 @@ public View onCreateView(LayoutInflater inflater,
 
     // file that ocntains listview
     inflatedView = inflater.inflate(R.layout.fragment_start, container, false);
-    button=(Button) inflatedView.findViewById(R.id.button);
+    button=(Button) inflatedView.findViewById(R.id.buttonRed);
 
     // This button
     button.setOnClickListener(new View.OnClickListener() {
