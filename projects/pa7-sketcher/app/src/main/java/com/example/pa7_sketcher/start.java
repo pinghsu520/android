@@ -24,6 +24,11 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * The purpose of this fragment is to show the display of the initial screen with the drawing.
+ * This fragment calls on the
+ *
+ */
 public class start extends Fragment {
 
     ListView listNews;
@@ -47,20 +52,107 @@ public View onCreateView(LayoutInflater inflater,
 
     // file that ocntains listview
     inflatedView = inflater.inflate(R.layout.fragment_start, container, false);
-    button=(Button) inflatedView.findViewById(R.id.buttonRed);
 
-    // This button
+    // This button makes red color
+    button=(Button) inflatedView.findViewById(R.id.buttonRed);
     button.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view)
         {
-            System.out.println("HI");
+            dv.drawPaint.setColor(getResources().getColor((R.color.red)));
+        }
+    });
+
+
+    // This button makes green color
+    button=(Button) inflatedView.findViewById(R.id.buttonGreen);
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view)
+        {
+            dv.drawPaint.setColor(getResources().getColor((R.color.green)));
+        }
+    });
+
+
+    // This button makes blue color
+    button=(Button) inflatedView.findViewById(R.id.buttonBlue);
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view)
+        {
+            dv.drawPaint.setColor(getResources().getColor((R.color.blue)));
+        }
+    });
+
+
+    // This button makes gold color
+    button=(Button) inflatedView.findViewById(R.id.buttonGold);
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view)
+        {
+            dv.drawPaint.setColor(getResources().getColor((R.color.gold)));
+        }
+    });
+
+
+
+
+
+
+
+
+
+    // This button makes small stroke
+    button=(Button) inflatedView.findViewById(R.id.small);
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view)
+        {
+            dv.drawPaint.setStrokeWidth(7.0f);
+        }
+    });
+
+
+    // This button makes medium stroke
+    button=(Button) inflatedView.findViewById(R.id.medium);
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view)
+        {
+            dv.drawPaint.setStrokeWidth(22.0f);
+        }
+    });
+
+
+    // This button makes small stroke
+    button=(Button) inflatedView.findViewById(R.id.large);
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view)
+        {
+            dv.drawPaint.setStrokeWidth(30.0f);
+        }
+    });
+
+
+
+
+    // This button clears screen
+    button=(Button) inflatedView.findViewById(R.id.clear);
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view)
+        {
+            System.out.println("clear");
+            dv.startNew();
         }
     });
 
 
     dv = new DrawingView(this.containerActivity,null);
-    LinearLayout ll = getActivity().findViewById(R.id.drawing);
+    LinearLayout ll = (LinearLayout)inflatedView.findViewById(R.id.drawing);
     ll.addView(dv);
 
 
@@ -70,6 +162,9 @@ public View onCreateView(LayoutInflater inflater,
 //    public void clearDrawing(View v) {
 //        dv.startNew();
 //    }
+
+
+
 //
 //    public void addDrawing(View v) {
 //        Bitmap b = dv.getBitmap();

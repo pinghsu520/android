@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18feb68f-f5a1-4e77-a8d9-da2ee4504810" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Sketcher/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Sketcher/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/java/com/example/pa7_sketcher/DrawingView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Sketcher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Sketcher/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/java/com/example/pa7_sketcher/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/java/com/example/pa7_sketcher/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/java/com/example/pa7_sketcher/DrawingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/java/com/example/pa7_sketcher/DrawingView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/java/com/example/pa7_sketcher/start.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/java/com/example/pa7_sketcher/start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/res/layout/fragment_start.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/res/layout/fragment_start.xml" afterDir="false" />
     </list>
@@ -40,8 +33,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/benjdd/videogamecharacters/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="285">
+              <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="32" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/benjdd/videogamecharacters/DrawingView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="34" column="55" lean-forward="true" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -50,8 +52,8 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+            <state relative-caret-position="272">
+              <caret line="28" column="32" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -61,10 +63,18 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>adddrawing</find>
+      <find>add</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/java/com/benjdd/videogamecharacters/MainActivity.java" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
@@ -103,12 +113,6 @@
               <item name="DrawAndSaveApp" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="DrawAndSaveApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -216,6 +220,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="313" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.3381295" />
@@ -261,15 +266,15 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        <state relative-caret-position="272">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/benjdd/videogamecharacters/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="285">
+          <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="32" selection-end-column="5" />
         </state>
       </provider>
     </entry>

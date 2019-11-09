@@ -50,6 +50,7 @@
             android:id="@+id/small"
             android:layout_width="wrap_content"
             android:layout_weight="1"
+            android:onClick="smallStroke"
             android:layout_height="wrap_content"
             android:text="S" />
 
@@ -72,11 +73,12 @@
             android:id="@+id/clear"
             android:layout_width="wrap_content"
             android:layout_weight="1"
+            android:onClick="clearDrawing"
             android:layout_height="wrap_content"
             android:text="Clear" />
 
         <Button
-            android:id="@+id/save"
+            android:id="@+id/share"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -93,18 +95,6 @@
         android:background="#cccccc">
 
     </LinearLayout>
-
-
-
-    <TextView
-        android:id="@+id/hello"
-        android:layout_width="311dp"
-        android:layout_height="114dp"
-        android:gravity="center"
-        android:textSize="32dp"
-        android:color="@color/red"
-        android:text="News Reader"
-        />
 
 
 
