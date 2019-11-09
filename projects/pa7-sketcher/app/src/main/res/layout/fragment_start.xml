@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/initial"
     android:color="@color/green"
     android:orientation="vertical">
@@ -14,30 +15,30 @@
                 android:id="@+id/buttonRed"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Button" />
+                android:background="@color/red"
+                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/buttonGreen"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Button" />
+                android:background="@color/green"
+                android:layout_height="wrap_content" />
 
 
             <Button
                 android:id="@+id/buttonBlue"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Button" />
+                android:background="@color/blue"
+                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/buttonGold"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:background="@color/gold" />
 
     </LinearLayout>
 
@@ -50,14 +51,14 @@
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="S" />
 
         <Button
             android:id="@+id/medium"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="M" />
 
 
         <Button
@@ -65,25 +66,33 @@
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="L" />
 
         <Button
             android:id="@+id/clear"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Clear" />
 
         <Button
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Share" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:id="@+id/drawing"
+        android:layout_weight="1"
+        android:background="#cccccc">
 
+    </LinearLayout>
 
 
 

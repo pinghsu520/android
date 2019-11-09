@@ -2,9 +2,11 @@ package com.example.pa7_sketcher;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -13,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -28,12 +32,9 @@ public class start extends Fragment {
     private Activity containerActivity = null;
     private View inflatedView = null;
 
-    private ListView contactsListView;
-    ArrayAdapter<String> contactsAdapter = null;
-    ArrayList<String> contacts = new ArrayList<String>();
-
-    String publicXML="https://newsapi.org/v2/everything?sortBy=publishedAt&q=arizona&from=2019-10-19&apiKey=530a5c059857443595116cf3702a1463";
+    DrawingView dv = null;
     Button button;
+
     public start() { }
 
     public void setContainerActivity(Activity containerActivity) {
@@ -56,8 +57,27 @@ public View onCreateView(LayoutInflater inflater,
             System.out.println("HI");
         }
     });
+
+
+    dv = new DrawingView(this.containerActivity,null);
+    LinearLayout ll = getActivity().findViewById(R.id.drawing);
+    ll.addView(dv);
+
+
     return inflatedView;
 }
+
+//    public void clearDrawing(View v) {
+//        dv.startNew();
+//    }
+//
+//    public void addDrawing(View v) {
+//        Bitmap b = dv.getBitmap();
+//        ImageView iv = new ImageView(this);
+//        iv.setImageBitmap(b);
+////        LinearLayout ll = getActivity().findViewById(R.id.list_of_drawings);
+////        ll.addView(iv);
+//    }
 
 
 
