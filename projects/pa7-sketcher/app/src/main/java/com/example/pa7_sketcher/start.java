@@ -98,12 +98,6 @@ public View onCreateView(LayoutInflater inflater,
 
 
 
-
-
-
-
-
-
     // This button makes small stroke
     button=(Button) inflatedView.findViewById(R.id.small);
     button.setOnClickListener(new View.OnClickListener() {
@@ -145,10 +139,22 @@ public View onCreateView(LayoutInflater inflater,
         @Override
         public void onClick(View view)
         {
-            System.out.println("clear");
             dv.startNew();
         }
     });
+
+
+    // This button makes new fragment share
+    button=(Button) inflatedView.findViewById(R.id.share);
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view)
+        {
+            System.out.println("share");
+        }
+    });
+
+
 
 
     dv = new DrawingView(this.containerActivity,null);

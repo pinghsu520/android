@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18feb68f-f5a1-4e77-a8d9-da2ee4504810" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/java/com/example/pa7_sketcher/DrawingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/java/com/example/pa7_sketcher/DrawingView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/java/com/example/pa7_sketcher/start.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/java/com/example/pa7_sketcher/start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/res/layout/fragment_start.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../projects/pa7-sketcher/app/src/main/res/layout/fragment_start.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/benjdd/videogamecharacters/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
@@ -39,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/benjdd/videogamecharacters/DrawingView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
@@ -62,8 +60,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>adddrawing</find>
       <find>add</find>
+      <find>adddrawing</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -77,10 +75,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="313" />
-    <option name="width" value="1853" />
-    <option name="height" value="1055" />
+    <option name="x" value="389" />
+    <option name="y" value="405" />
+    <option name="width" value="1389" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -256,13 +254,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/benjdd/videogamecharacters/DrawingView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="34" column="55" lean-forward="true" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -275,6 +266,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="26" column="2" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/benjdd/videogamecharacters/DrawingView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="34" column="55" lean-forward="true" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
         </state>
       </provider>
     </entry>
